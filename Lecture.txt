@@ -1,0 +1,10 @@
+1. สร้าง environment ด้วยคำสั่ง python -m venv env
+   --> จะได้ folder ชื่อ env ขึ้นมา
+2. ให้ทำการ Activate ด้วยคำสั่ง .\env\Scripts\Activate เพื่อให้การทำงานเข้าไปอยู่ใน Environment จำลอง
+3. ติดตั้ง fastapi, hypercorn, uvicorn ด้วยคำสั่ง pipenv install ... (hyper กับ uvi เลือกใช้อันใดอันหนึ่ง)
+4. สร้างไฟล์ main.py และ coding จน return dict ออกมาสั้นๆ return {'msg':'Hello FastAPI'}
+5. ทำการรัน server ด้วย hypercorn ด้วยคำสั่ง hypercorn main:app --reload
+6. สามารถกำหนดชนิดตัวแปรที่รับได้ผ่าน parameter เช่น async def get_item(item_id : int):
+7. การใช้ format สามารถใส่ f หน้า string ที่ต้องการและใส่ชื่อตัวแปรไปในปีกกาได้เลย
+8. รู้จักการใช้ routers ซึ่งจะช่วยแยก api ชัดเจนยิ่งขึ้นถ้าทำถึงระดับ Web
+9. เริม่ใช้งานจริงกับ Database ซึ่งจะต้องใช้ Lib ชื่อ tortoise-orm (ทำการ install เลย)
